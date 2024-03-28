@@ -1,0 +1,57 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "token:genJson": "./node_modules/.bin/token-transformer src/tokens/tokens.json src/tokens/output.json",
+    "token:genToken": "style-dictionary build --config style-dictionary.config.json",
+    "token": "run-s token:genJson token:genToken"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.0",
+    "@emotion/server": "^11.10.0",
+    "@mantine/core": "^5.1.1",
+    "@mantine/dates": "^5.1.1",
+    "@mantine/form": "^5.1.1",
+    "@mantine/hooks": "^5.1.1",
+    "@mantine/next": "^5.1.1",
+    "@supabase/supabase-js": "^1.35.4",
+    "@tabler/icons": "^1.81.0",
+    "dayjs": "^1.11.4",
+    "microcms-js-sdk": "^2.0.0",
+    "next": "^13.1.0",
+    "react": "^18.2.0",
+    "react-cookie": "^4.1.1",
+    "react-dom": "^18.2.0",
+    "react-error-boundary": "^3.1.4",
+    "react-markdown": "^8.0.3",
+    "react-query": "^4.0.0-beta.7",
+    "zustand": "^4.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.2",
+    "@types/node": "17.0.23",
+    "@types/react": "17.0.43",
+    "autoprefixer": "10.4.4",
+    "eslint": "8.12.0",
+    "eslint-config-next": "^13.1.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "postcss": "8.4.12",
+    "prettier": "2.6.2",
+    "prettier-plugin-tailwindcss": "0.1.8",
+    "style-dictionary": "^3.7.1",
+    "tailwindcss": "^3.1.8",
+    "token-transformer": "^0.0.25",
+    "typescript": "4.5.4"
+  },
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
+  }
+}
